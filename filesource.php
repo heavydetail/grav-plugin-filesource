@@ -62,12 +62,12 @@ class FilesourcePlugin extends Plugin
 //                $template = $matches[4];
 
 		$req_file = $page->path() . "/" . $filename;
-		$replace_header = "<pre><code>";
-		$replace_footer = "</code></pre>";
+	//	$replace_header = "<pre><code>";
+	//	$replace_footer = "</code></pre>";
 		$replace_content = file_get_contents($req_file);
 
-		$replace = "$replace_header" . "$replace_content" . "$replace_footer";
-
+	//	$replace = "$replace_header" . "$replace_content" . "$replace_footer";
+		$replace = $replace_content;
                 // do the replacement
                 return $replace;
             };
